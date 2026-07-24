@@ -1,0 +1,26 @@
+{
+  "name": "Senior AI & Full-Stack Engineer",
+  "title": "Python & TypeScript Expert",
+  "bio": "대규모 분산 시스템 설계와 생성형 AI(RAG, LLM Agent) 서빙에 특화된 시니어 엔지니어입니다.",
+  "skills": [
+    { "name": "Python", "level": "Expert", "category": "Backend/AI" },
+    { "name": "TypeScript", "level": "Advanced", "category": "Frontend" },
+    { "name": "FastAPI", "level": "Expert", "category": "Backend" },
+    { "name": "Next.js", "level": "Advanced", "category": "Frontend" },
+    { "name": "LangChain", "level": "Expert", "category": "AI/Agent" }
+  ],
+  "projects": [
+    {
+      "id": "rag-platform",
+      "title": "Enterprise RAG Agent Platform",
+      "description": "LangChain과 FastAPI를 활용해 기업 내부 문서를 실시간 검색하고 답변하는 고성능 AI 에이전트 구축",
+      "metrics": "검색 응답 속도 40% 개선, 정확도 94% 달성"
+    },
+    {
+      "id": "high-perf-dashboard",
+      "title": "High-Performance Analytics Dashboard",
+      "description": "Next.js와 TypeScript 기반 실시간 데이터 시각화 및 모니터링 시스템 개발",
+      "metrics": "대규모 트래픽 50,000 req/s 안정적 처리"
+    }
+  ]
+}
