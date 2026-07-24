@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "@/components/common/Navbar";
 import { useState } from "react";
-import { sendAIChat } from "@/services/api";
+import { runMenuAgent } from "@/services/api";
 import { Send, Bot } from "lucide-react";
 
 export default function AgentPage() {
@@ -14,8 +14,14 @@ export default function AgentPage() {
     const userText = input;
     setMessages(prev => [...prev, { sender: "user", text: userText }]);
     setInput("");
-    const aiRes = await sendAIChat(userText);
-    setMessages(prev => [...prev, { sender: "ai", text: aiRes }]);
+    
+    try {
+      // menu_id를 1번으로 지정하고 프롬프트(질문) 전달
+      const aiRes = await runMenuAgent(1, userText);
+      setMessages(prev => [...prev, { sender: "ai", text: aiRes }]);
+    } catch {
+      setMessages(prev => [...prev, { sender: "ai", text: "오류가 발생했습니다. 다시 시도해 주세요." }]);
+    }
   };
 
   return (
