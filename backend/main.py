@@ -47,7 +47,7 @@ def run_ai_agent(req: AgentRequest):
         system_instruction = instructions.get(req.menu_id, "너는 고성능 AI 에이전트야.")
 
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="models/gemini-flash-lite-latest",
             contents=f"{system_instruction}\n\n사용자 요청: {req.prompt}"
         )
 
